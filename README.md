@@ -1,4 +1,4 @@
-![qfortune-preview](https://github.com/mdomlop/retrosmart-aurorae-themes/blob/master/preview.png "Retrosmart Aurorae themes")
+![preview](https://github.com/mdomlop/retrosmart-aurorae-themes/blob/master/preview.png "Retrosmart Aurorae themes")
 
 Retrosmart Aurorae themes
 =========================
