@@ -24,7 +24,7 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="293.00261"
+     inkscape:cx="191.00261"
      inkscape:cy="215.16521"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -2970,7 +2970,7 @@
        x="298"
        y="790.36218" />
     <rect
-       style="fill:#ffcc00;fill-opacity:1;stroke:none"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
        id="innerborder-center"
        width="17"
        height="11"
@@ -3309,7 +3309,7 @@
        x="298"
        y="811.36218" />
     <rect
-       style="fill:#999999;fill-opacity:1;stroke:none"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
        id="innerborder-inactive-center"
        width="17"
        height="11"
