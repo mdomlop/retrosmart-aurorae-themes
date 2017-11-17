@@ -11,7 +11,7 @@
    id="layer1"
    width="180"
    version="1.1"
-   sodipodi:docname="minimize.svg"
+   sodipodi:docname="menu.svg"
    inkscape:version="0.92.1 r15371">
   <metadata
      id="metadata23">
@@ -34,26 +34,22 @@
      objecttolerance="10"
      gridtolerance="10"
      guidetolerance="10"
-     inkscape:pageopacity="0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:window-width="944"
      inkscape:window-height="996"
      id="namedview19"
      showgrid="true"
-     inkscape:zoom="3.7083822"
-     inkscape:cx="0.083232474"
-     inkscape:cy="35.245277"
+     inkscape:zoom="3.4729818"
+     inkscape:cx="-12.611823"
+     inkscape:cy="30.897339"
      inkscape:window-x="0"
      inkscape:window-y="44"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0">
+     inkscape:current-layer="layer1">
     <inkscape:grid
        type="xygrid"
-       id="grid11555" />
+       id="grid4512" />
   </sodipodi:namedview>
   <g
      id="active-center">
@@ -63,18 +59,18 @@
        width="45"
        height="30"
        x="3.7843799e-09"
-       y="5.678711e-07" />
+       y="-4.321289e-07" />
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke-width:0.99999994"
        id="rect934"
        width="11"
        height="0.99999994"
        x="17"
-       y="15.000012" />
+       y="20.000011" />
   </g>
   <g
      id="hover-center"
-     transform="translate(0.03662996,-39.839744)">
+     transform="translate(0.03662996,-39.839745)">
     <g
        id="g4625">
       <rect
@@ -85,7 +81,7 @@
          id="rect936-3"
          style="fill:#00ff00;fill-opacity:1;stroke-width:0.99999994" />
       <rect
-         y="54.839756"
+         y="59.839756"
          x="61.963371"
          height="0.99999994"
          width="11"
@@ -95,7 +91,7 @@
   </g>
   <g
      id="pressed-center"
-     transform="translate(0.03662996,-39.839744)">
+     transform="translate(0.03662996,-39.839745)">
     <rect
        style="fill:#ffcc00;fill-opacity:1;stroke-width:0.99999994"
        id="rect936-7"
@@ -109,11 +105,11 @@
        width="11"
        height="0.99999994"
        x="106.96338"
-       y="54.839756" />
+       y="59.839756" />
   </g>
   <g
      id="inactive-center"
-     transform="translate(-134.96338,-9.839756)">
+     transform="translate(-134.96338,-9.8397562)">
     <g
        id="g4633">
       <rect
@@ -124,7 +120,7 @@
          id="rect936-35"
          style="fill:#999999;fill-opacity:1;stroke-width:0.99999994" />
       <rect
-         y="54.839756"
+         y="59.839756"
          x="151.96338"
          height="0.99999994"
          width="11"
@@ -134,7 +130,7 @@
   </g>
   <g
      id="hover-inactive-center"
-     transform="translate(-134.96338,-9.839756)">
+     transform="translate(-134.96338,-9.8397562)">
     <g
        id="g4637">
       <rect
@@ -145,7 +141,7 @@
          id="rect936-9"
          style="fill:#009900;fill-opacity:1;stroke-width:0.99999994" />
       <rect
-         y="54.839756"
+         y="59.839756"
          x="196.96338"
          height="0.99999994"
          width="11"
@@ -155,7 +151,7 @@
   </g>
   <g
      id="pressed-inactive-center"
-     transform="translate(-134.96338,-9.839756)">
+     transform="translate(-134.96338,-9.8397562)">
     <g
        id="g4641">
       <rect
@@ -166,7 +162,7 @@
          id="rect936-2"
          style="fill:#ff9900;fill-opacity:1;stroke-width:0.99999994" />
       <rect
-         y="54.839756"
+         y="59.839756"
          x="241.96338"
          height="0.99999994"
          width="11"
@@ -176,7 +172,7 @@
   </g>
   <g
      id="deactivated-center"
-     transform="translate(-134.96337,-39.839744)">
+     transform="translate(-134.96338,-39.839752)">
     <g
        id="g4645">
       <rect
@@ -187,7 +183,7 @@
          id="rect936-0"
          style="fill:#000000;fill-opacity:1;stroke-width:0.99999994" />
       <rect
-         y="54.839756"
+         y="59.839756"
          x="286.96338"
          height="0.99999994"
          width="11"
@@ -197,7 +193,7 @@
   </g>
   <g
      id="deactivated-inactive-center"
-     transform="translate(-180.00001,-39.999999)">
+     transform="translate(-180.00001,-39.999996)">
     <g
        id="g4649"
        transform="translate(0.03662996,30.160244)">
@@ -209,7 +205,7 @@
          id="rect936-36"
          style="fill:#333333;fill-opacity:1;stroke-width:0.99999994" />
       <rect
-         y="54.839756"
+         y="59.839756"
          x="331.96338"
          height="0.99999994"
          width="11"
