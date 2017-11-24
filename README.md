@@ -9,7 +9,18 @@ A retrosmart look collection of themes for KDE Aurorae.
 Installation
 ------------
 
-Install to `~/.local/share/aurorae/themes/` or to `/usr/share/aurorae/themes/`.
+As unprivileged user copy src to `~/.local/share/aurorae/themes/` or as root
+to `/usr/share/aurorae/themes/`.
 
 Create such directories if they don't exist.
+
+
+Alternatively you can run:
+
+        make install
+
+or (to use Debian package manager):
+
+        make deb
+        dpkg -i retrosmart-kvantum-theme.deb
 
