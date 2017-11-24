@@ -1,0 +1,14 @@
+Source: retrosmart-aurorae-themes
+Section: main
+Priority: optional
+Maintainer: Manuel Domínguez López <mdomlop@gmail.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.8
+Homepage: https://github.com/mdomlop/retrosmart-aurorae-themes
+
+Package: retrosmart-aurorae-themes
+Architecture: all
+Provides: retrosmart-aurorae-themes
+Conflicts: retrosmart-aurorae-themes-git
+Depends:
+Description: A retrosmart look collection of themes for KDE Aurorae.

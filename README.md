@@ -3,7 +3,7 @@
 Retrosmart Aurorae themes
 =========================
 
-A retrosmart-look collection of themes for KDE Aurorae.
+A retrosmart look collection of themes for KDE Aurorae.
 
 
 Installation
