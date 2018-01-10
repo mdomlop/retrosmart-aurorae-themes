@@ -15,12 +15,18 @@ to `/usr/share/aurorae/themes/`.
 Create such directories if they don't exist.
 
 
-Alternatively you can run:
+### System-wide Installation
 
-        make install
+From Makefile:
 
-or (to use Debian package manager):
+        # make install
 
-        make deb
-        dpkg -i retrosmart-kvantum-theme.deb
+For Debian package manager:
 
+        $ make dpkg
+        # dpkg -i retrosmart-aurorae-themes*.deb
+
+For Arch linux:
+
+        $ make pacman
+        # pacman -U retrosmart-aurorae-themes-local-*-*-any.pkg.tar.xz

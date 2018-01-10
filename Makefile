@@ -35,9 +35,9 @@ uninstall: service-down
 	rm -rf $(PREFIX)/share/doc/$(EXECUTABLE_NAME)/
 
 clean:
-	rm -rf *.xz *.gz *.pot po/*.mo *.tgz *.deb *.rpm ChangeLog /tmp/tmp.*.$(EXECUTABLE_NAME) debian/changelog debian/README debian/files debian/$(EXECUTABLE_NAME) debian/debhelper-build-stamp debian/$(EXECUTABLE_NAME)*
+	rm -rf *.xz *.gz *.pot po/*.mo *.tgz *.deb *.rpm ChangeLog /tmp/tmp.*.$(EXECUTABLE_NAME) debian/changelog debian/README debian/files debian/$(EXECUTABLE_NAME) debian/debhelper-build-stamp debian/$(EXECUTABLE_NAME)* pkg
 
-deb: ChangeLog
+dpkg: ChangeLog
 	cp README.md debian/README
 	cp ChangeLog debian/changelog
 	#fakeroot debian/rules clean
@@ -49,11 +49,9 @@ deb: ChangeLog
 	@echo dpkg -i $(EXECUTABLE_NAME)_$(VERSION)_all.deb
 
 pacman: clean
-	mkdir $(TEMPDIR)
-	tar cf $(TEMPDIR)/$(EXECUTABLE_NAME).tar ../$(EXECUTABLE_NAME)
-	cp packages/pacman/local/PKGBUILD $(TEMPDIR)/
-	cd $(TEMPDIR); makepkg
-	cp $(TEMPDIR)/$(EXECUTABLE_NAME)-*.pkg.tar.xz .
+	sed -i "s|_name=.*|_name=$(EXECUTABLE_NAME)|" PKGBUILD
+	sed -i "s|pkgver=.*|pkgver=$(VERSION)|" PKGBUILD
+	makepkg -e
 	@echo Package done!
 	@echo You can install it as root with:
-	@echo pacman -U $(EXECUTABLE_NAME)-*.pkg.tar.xz
+	@echo pacman -U $(EXECUTABLE_NAME)-local-$(VERSION)-1-any.pkg.tar.xz
