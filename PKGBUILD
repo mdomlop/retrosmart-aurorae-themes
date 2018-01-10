@@ -8,7 +8,7 @@ _name=retrosmart-aurorae-themes
 _gitname=${_name}-git
 
 pkgname=${_name}-local
-pkgver=0.2a
+pkgver=0.3a
 pkgrel=1
 pkgdesc="Retrosmart theme for Aurorae."
 url="https://github.com/mdomlop/${_name}.git"

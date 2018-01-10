@@ -3,7 +3,7 @@ DESTDIR=''
 PROGRAM_NAME := Retrosmart Aurorae themes
 EXECUTABLE_NAME := retrosmart-aurorae-themes
 DESCRIPTION := A retrosmart look collection of themes for KDE Aurorae.
-VERSION := 0.2a
+VERSION := 0.3a
 AUTHOR := Manuel Domínguez López
 MAIL := mdomlop@gmail.com
 LICENSE := GPLv3+
@@ -37,7 +37,7 @@ uninstall: service-down
 clean:
 	rm -rf *.xz *.gz *.pot po/*.mo *.tgz *.deb *.rpm ChangeLog /tmp/tmp.*.$(EXECUTABLE_NAME) debian/changelog debian/README debian/files debian/$(EXECUTABLE_NAME) debian/debhelper-build-stamp debian/$(EXECUTABLE_NAME)* pkg
 
-dpkg: ChangeLog
+dpkg: clean ChangeLog
 	cp README.md debian/README
 	cp ChangeLog debian/changelog
 	#fakeroot debian/rules clean
@@ -48,10 +48,13 @@ dpkg: ChangeLog
 	@echo You can install it as root with:
 	@echo dpkg -i $(EXECUTABLE_NAME)_$(VERSION)_all.deb
 
-pacman: clean
+pacman: clean ChangeLog
 	sed -i "s|_name=.*|_name=$(EXECUTABLE_NAME)|" PKGBUILD
 	sed -i "s|pkgver=.*|pkgver=$(VERSION)|" PKGBUILD
 	makepkg -e
 	@echo Package done!
 	@echo You can install it as root with:
 	@echo pacman -U $(EXECUTABLE_NAME)-local-$(VERSION)-1-any.pkg.tar.xz
+
+ocs: clean ChangeLog
+	cd src; for i in *; do tar cJf $$i.tar.xz $$i;mv $$i.tar.xz ..; done
