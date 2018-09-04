@@ -1,0 +1,52 @@
+Installation
+------------
+
+### Only for local user installation
+
+Direct installation
+
+        make user_install
+        
+Uninstall
+
+        make user_clean
+        
+Install from OCS package
+    
+        make ocs_install
+
+Uninstall
+
+        make ocs_uninstall
+
+### System-wide installation
+
+Classic method:
+
+        # make install
+    
+Uninstall
+
+        # make uninstall
+
+For Debian package manager:
+
+- Build and install:
+
+        $ make debian_pkg
+        # dpkg -i @executable_name@_@version@_all.deb
+
+- Uninstall:
+
+        # apt purge snapman
+
+For Arch linux:
+
+- Build and install:
+
+        $ make arch_pkg
+        # pacman -U @executable_name@-@version@-1--any.pkg.tar.xz
+
+- Uninstall:
+
+        # pacman -Rsc snapman

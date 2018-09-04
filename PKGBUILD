@@ -4,18 +4,15 @@ _pkgver_year=2018
 _pkgver_month=01
 _pkgver_day=09
 
-_name=retrosmart-aurorae-themes
-_gitname=${_name}-git
-
-pkgname=${_name}-local
+pkgname=retrosmart-aurorae-themes
 pkgver=0.3a
 pkgrel=1
-pkgdesc="Retrosmart themes for Aurorae."
-url="https://github.com/mdomlop/${_name}.git"
+pkgdesc=A retrosmart look collection of themes for KDE Aurorae.
+url=https://github.com/mdomlop/retrosmart-aurorae-themes
 source=()
-md5sums=('SKIP')
 license=('GPL3')
 optdepends=('retrosmart-kvantum-theme: The corresponding theme for Kvantum'
+            'retrosmart-qtcurve-theme: The corresponding theme for QtCurve'
             'retrosmart-gtk-themes: The corresponding GTK themes'
             'retrosmart-openbox-themes: The corresponding Openbox themes'
             'retrosmart-wallpapers: The corresponding backgrounds project'
@@ -23,8 +20,7 @@ optdepends=('retrosmart-kvantum-theme: The corresponding theme for Kvantum'
             'retrosmart-xfwm4-themes: The corresponding XFwm4 themes')
 arch=('any')
 group=('retrosmart')
-conflicts=(${_name} ${_gitname})
-provides=($_name)
+changelog=ChangeLog
 
 
 build() {
@@ -34,5 +30,5 @@ build() {
 
 package() {
     cd "$startdir"
-    make install DESTDIR=${pkgdir} PREFIX='/usr'
+    make install DESTDIR=$pkgdir
 }

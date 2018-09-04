@@ -1,25 +1,46 @@
 PREFIX='/usr'
 DESTDIR=''
-PROGRAM_NAME := Retrosmart Aurorae themes
-EXECUTABLE_NAME := retrosmart-aurorae-themes
-DESCRIPTION := A retrosmart look collection of themes for KDE Aurorae.
-VERSION := 0.3a
-AUTHOR := Manuel Domínguez López
-MAIL := mdomlop@gmail.com
-LICENSE := GPLv3+
+PROGRAM_NAME := $(shell grep ^PROGRAM_NAME INFO | cut -d= -f2)
+EXECUTABLE_NAME := $(shell grep ^EXECUTABLE_NAME INFO | cut -d= -f2)
+AUTHOR := $(shell grep ^AUTHOR INFO | cut -d= -f2)
+VERSION := $(shell grep ^VERSION INFO | cut -d= -f2)
+LICENSE := $(shell grep ^LICENSE INFO | cut -d= -f2)
+DESCRIPTION := $(shell grep ^DESCRIPTION INFO | cut -d= -f2)
+URL := $(shell grep ^URL INFO | cut -d= -f2)
+MAIL := $(shell grep ^MAIL INFO | cut -d= -f2 | tr '[A-Za-z]' '[N-ZA-Mn-za-m]')
 TIMESTAMP = $(shell LC_ALL=C date '+%a, %d %b %Y %T %z')
-TEMPDIR := $(shell mktemp -u --suffix .$(EXECUTABLE_NAME))
+YEAR = 2018
 
+dist: README.md ChangeLog AUTHORS
+
+togit: clean README.md
+	git add .
+	git push origin
+
+AUTHORS: authors.in
+	sed s/@mail@/$(mail)/g $^ > $@
+	
+
+README.md: README INSTALL
+	cat README INSTALL > README.md
+	@echo
+	@echo Now you can make install or make debian_pkg
+	sed -i "s|@executable_name@|$(EXECUTABLE_NAME)|g" $@
+	sed -i "s|@version@|$(VERSION)|g" $@
+	
 ChangeLog: changelog.in
 	@echo "$(EXECUTABLE_NAME) ($(VERSION)) unstable; urgency=medium" > $@
 	@echo >> $@
-	@echo "  * Git build." >> $@
+	@echo "  * Local build." >> $@
 	@echo >> $@
 	@echo " -- $(AUTHOR) <$(MAIL)>  $(TIMESTAMP)" >> $@
 	@echo >> $@
 	@cat $^ >> $@
-
-install:
+	sed -i "s|@mail@|$(MAIL)|g" $@
+	
+version_update: purge README.md ChangeLog
+	
+install: dist
 	install -dm 755 $(DESTDIR)/$(PREFIX)/share/aurorae/themes/
 	cp -r src/* $(DESTDIR)/$(PREFIX)/share/aurorae/themes/
 	chown -R root:root $(DESTDIR)/$(PREFIX)'/share/aurorae/themes'/retrosmart-*
@@ -29,17 +50,45 @@ install:
 	install -Dm644 ChangeLog $(DESTDIR)/$(PREFIX)/share/doc/$(EXECUTABLE_NAME)/ChangeLog
 	install -Dm644 README.md $(DESTDIR)/$(PREFIX)/share/doc/$(EXECUTABLE_NAME)/README
 
-uninstall: service-down
+uninstall:
 	rm -f $(PREFIX)/share/aurorae/themes/retrosmart-*
 	rm -f $(PREFIX)/share/licenses/$(EXECUTABLE_NAME)/
 	rm -rf $(PREFIX)/share/doc/$(EXECUTABLE_NAME)/
 
-clean:
-	rm -rf *.xz *.gz *.pot po/*.mo *.tgz *.deb *.rpm ChangeLog /tmp/tmp.*.$(EXECUTABLE_NAME) debian/changelog debian/README debian/files debian/$(EXECUTABLE_NAME) debian/debhelper-build-stamp debian/$(EXECUTABLE_NAME)* pkg
+clean: arch_clean debian_clean ocs_clean
+	rm -rf ChangeLog README.md AUTHORS
 
-dpkg: clean ChangeLog
+debian:
+	mkdir debian
+
+debian/compat: compat debian
+	cp compat $@
+	
+debian/rules: rules debian
+	cp rules $@
+	
+debian/changelog: ChangeLog debian
+	cp ChangeLog $@
+
+debian/control: control debian
+	sed s/@mail@/$(MAIL)/g control > $@
+
+debian/README: README.md debian
 	cp README.md debian/README
-	cp ChangeLog debian/changelog
+	
+debian/copyright: copyright debian
+	@echo Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/ > $@
+	@echo Upstream-Name: $(EXECUTABLE_NAME) >> $@
+	@echo "Upstream-Contact: Manuel Domínguez López <$(MAIL)>" >> $@
+	@echo Source: $(SOURCE) >> $@
+	@echo License: $(LICENSE) >> $@
+	@echo >> $@
+	@echo 'Files: *' >> $@
+	@echo "Copyright: $(YEAR) $(AUTHOR) <$(MAIL)>" >> $@
+	@echo License: $(LICENSE) >> $@
+	cat copyright >> $@
+	
+debian_pkg: clean debian/compat debian/control debian/rules debian/changelog debian/README
 	#fakeroot debian/rules clean
 	#fakeroot debian/rules build
 	fakeroot debian/rules binary
@@ -48,13 +97,30 @@ dpkg: clean ChangeLog
 	@echo You can install it as root with:
 	@echo dpkg -i $(EXECUTABLE_NAME)_$(VERSION)_all.deb
 
-pacman: clean ChangeLog
-	sed -i "s|_name=.*|_name=$(EXECUTABLE_NAME)|" PKGBUILD
+debian_clean:
+	rm -rf debian $(EXECUTABLE_NAME)_$(VERSION)_all.deb
+
+arch_pkg: clean ChangeLog
+	sed -i "s|pkgname=.*|pkgname=$(EXECUTABLE_NAME)|" PKGBUILD
 	sed -i "s|pkgver=.*|pkgver=$(VERSION)|" PKGBUILD
-	makepkg -e
+	sed -i "s|pkgdesc=.*|pkgdesc=$(DESCRIPTION)|" PKGBUILD
+	sed -i "s|url=.*|url=$(URL)|" PKGBUILD
+	makepkg
 	@echo Package done!
 	@echo You can install it as root with:
-	@echo pacman -U $(EXECUTABLE_NAME)-local-$(VERSION)-1-any.pkg.tar.xz
+	@echo pacman -U $(EXECUTABLE_NAME)-$(VERSION)-1-any.pkg.tar.xz
+	
+arch_clean:
+	rm -rf $(EXECUTABLE_NAME) $(EXECUTABLE_NAME)-$(VERSION)-1-any.pkg.tar.xz
 
-ocs: clean ChangeLog
+ocs_pkg: clean ChangeLog
 	cd src; for i in *; do tar cJf $$i.tar.xz $$i;mv $$i.tar.xz ..; done
+	
+ocs_clean:
+	rm -f retrosmart-*.tar.xz
+
+user_install:
+	cp -r src/retrosmart-* $$HOME/.local/share/aurorae/themes/
+
+user_uninstall:
+	rm -rf $$HOME/.local/share/aurorae/themes/retrosmart-*
