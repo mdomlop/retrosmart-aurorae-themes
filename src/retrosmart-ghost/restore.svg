@@ -13,7 +13,7 @@
    width="180"
    version="1.1"
    sodipodi:docname="restore.svg"
-   inkscape:version="0.92.1 r15371">
+   inkscape:version="0.92.2 2405546, 2018-03-11">
   <metadata
      id="metadata23">
     <rdf:RDF>
@@ -41,9 +41,9 @@
      inkscape:window-height="999"
      id="namedview19"
      showgrid="true"
-     inkscape:zoom="0.77073237"
-     inkscape:cx="105.59936"
-     inkscape:cy="-60.070009"
+     inkscape:zoom="4.3599207"
+     inkscape:cx="46.395292"
+     inkscape:cy="20.26155"
      inkscape:window-x="0"
      inkscape:window-y="44"
      inkscape:window-maximized="1"
@@ -75,7 +75,7 @@
 	Info: http://www.roitsystems.com/
  -->
   <rect
-     style="fill:#ffcc00;fill-opacity:1;stroke-width:0.99999994"
+     style="fill:#bf00bf;fill-opacity:1;stroke-width:0.99999994"
      id="rect4604-2"
      width="45"
      height="30"
@@ -83,12 +83,15 @@
      y="-35.000011" />
   <g
      id="g4628-6"
-     transform="matrix(3.7795276,0,0,3.7795276,-2,-1128.5196)">
+     transform="matrix(3.7795276,0,0,3.7795276,-2,-1128.5196)"
+     style="fill:#000000;fill-opacity:1">
     <g
-       id="g4626-1">
+       id="g4626-1"
+       style="fill:#000000;fill-opacity:1">
       <g
          id="g4614-8"
-         transform="translate(-2.38125,0.26457352)">
+         transform="translate(-2.38125,0.26457352)"
+         style="fill:#000000;fill-opacity:1">
         <rect
            y="294.35416"
            x="4.4979167"
@@ -120,7 +123,8 @@
       </g>
       <g
          transform="translate(-10.401534,0.64519629)"
-         id="g4624-2">
+         id="g4624-2"
+         style="fill:#000000;fill-opacity:1">
         <rect
            y="293.44437"
            x="15.164034"
@@ -236,7 +240,7 @@
        height="30"
        width="45"
        id="rect4604"
-       style="fill:#ffffff;fill-opacity:1;stroke-width:0.99999994" />
+       style="fill:#bfbfbf;fill-opacity:1;stroke-width:0.99999994" />
     <use
        height="100%"
        width="100%"
@@ -255,7 +259,7 @@
        height="30"
        width="45"
        id="rect4634"
-       style="fill:#ffffff;fill-opacity:1;stroke-width:0.99999994" />
+       style="fill:#bfbfbf;fill-opacity:1;stroke-width:0.99999994" />
     <use
        height="100%"
        width="100%"

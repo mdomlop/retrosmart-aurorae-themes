@@ -13,7 +13,7 @@
    width="180"
    version="1.1"
    sodipodi:docname="help.svg"
-   inkscape:version="0.92.1 r15371">
+   inkscape:version="0.92.2 2405546, 2018-03-11">
   <metadata
      id="metadata23">
     <rdf:RDF>
@@ -42,8 +42,8 @@
      id="namedview19"
      showgrid="true"
      inkscape:zoom="2.1799604"
-     inkscape:cx="143.20693"
-     inkscape:cy="-2.66116"
+     inkscape:cx="87.465204"
+     inkscape:cy="23.760544"
      inkscape:window-x="0"
      inkscape:window-y="44"
      inkscape:window-maximized="1"
@@ -54,7 +54,7 @@
        type="xygrid"
        id="grid128" />
     <sodipodi:guide
-       position="27,51"
+       position="46,51"
        orientation="0,1"
        id="guide11642"
        inkscape:locked="false" />
@@ -68,6 +68,11 @@
        orientation="0,1"
        id="guide11646"
        inkscape:locked="false" />
+    <sodipodi:guide
+       position="19,46"
+       orientation="1,0"
+       id="guide4575"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <!-- 
 	Generated using the Perl SVG Module V2.49
@@ -75,7 +80,7 @@
 	Info: http://www.roitsystems.com/
  -->
   <rect
-     style="fill:#ffcc00;fill-opacity:1;stroke-width:0.99999994"
+     style="fill:#bf45bf;fill-opacity:1;stroke-width:0.99999994"
      id="rect4604-2"
      width="45"
      height="30"
@@ -83,28 +88,31 @@
      y="-35.000011" />
   <g
      id="g4628-6"
-     transform="matrix(3.7795276,0,0,3.7795276,-2,-1128.5196)">
+     transform="matrix(3.7795276,0,0,3.7795276,-2,-1128.5196)"
+     style="fill:#000005;fill-opacity:1">
     <g
-       id="g4626-1">
+       id="g4626-1"
+       style="fill:#000005;fill-opacity:1">
       <g
          id="g4614-8"
-         transform="translate(-2.38125,0.26457352)">
+         transform="translate(-2.38125,0.26457352)"
+         style="fill:#000005;fill-opacity:1">
         <rect
            y="291.9729"
            x="5.2916665"
            height="0.52915889"
            width="0.52916682"
            id="rect4608-9"
-           style="fill:#000000;fill-opacity:1;stroke-width:0.1595486" />
+           style="fill:#000005;fill-opacity:1;stroke-width:0.1595486" />
         <rect
-           style="fill:#000000;fill-opacity:1;stroke-width:0.1595486"
+           style="fill:#000005;fill-opacity:1;stroke-width:0.1595486"
            id="rect4573"
            width="0.52916682"
            height="0.52915889"
            x="6.3499999"
            y="291.9729" />
         <rect
-           style="fill:#000000;fill-opacity:1;stroke-width:0.1595486"
+           style="fill:#000005;fill-opacity:1;stroke-width:0.1595486"
            id="rect4577"
            width="0.52916682"
            height="0.52915889"
@@ -116,20 +124,21 @@
            height="0.52915889"
            width="0.52916682"
            id="rect4579"
-           style="fill:#000000;fill-opacity:1;stroke-width:0.1595486" />
+           style="fill:#000005;fill-opacity:1;stroke-width:0.1595486" />
       </g>
       <g
          transform="translate(-10.401534,0.64519629)"
-         id="g4624-2">
+         id="g4624-2"
+         style="fill:#000005;fill-opacity:1">
         <rect
            y="291.3277"
            x="13.576534"
            height="0.26458332"
            width="1.0583332"
            id="rect4618-7"
-           style="fill:#000000;fill-opacity:1;stroke-width:0.15954973" />
+           style="fill:#000005;fill-opacity:1;stroke-width:0.15954973" />
         <rect
-           style="fill:#000000;fill-opacity:1;stroke-width:0.11281872"
+           style="fill:#000005;fill-opacity:1;stroke-width:0.11281872"
            id="rect4575"
            width="0.52916682"
            height="0.26458332"
@@ -198,25 +207,6 @@
            style="fill:#bfbfbf;fill-opacity:1;stroke-width:0.11281871" />
       </g>
     </g>
-  </g>
-  <g
-     id="active-center"
-     inkscape:label="#g11672">
-    <rect
-       y="0"
-       x="0"
-       height="30"
-       width="45"
-       id="rect4604"
-       style="fill:#ffffff;fill-opacity:1;stroke-width:0.99999994" />
-    <use
-       height="100%"
-       width="100%"
-       transform="translate(10,34.999991)"
-       id="use11668"
-       xlink:href="#g4628-6"
-       y="0"
-       x="0" />
   </g>
   <g
      id="inactive-center"
@@ -348,6 +338,86 @@
        transform="translate(125,64.999991)"
        id="use11710"
        xlink:href="#g11322"
+       y="0"
+       x="0" />
+  </g>
+  <g
+     id="g4628-6-3"
+     transform="matrix(3.7795276,0,0,3.7795276,8.0000002,-1128.5197)"
+     style="fill:#000005;fill-opacity:1">
+    <g
+       id="g4626-1-6"
+       style="fill:#000005;fill-opacity:1">
+      <g
+         id="g4614-8-7"
+         transform="translate(-2.38125,0.26457352)"
+         style="fill:#000005;fill-opacity:1">
+        <rect
+           y="291.9729"
+           x="5.2916665"
+           height="0.52915889"
+           width="0.52916682"
+           id="rect4608-9-5"
+           style="fill:#000005;fill-opacity:1;stroke-width:0.1595486" />
+        <rect
+           style="fill:#000005;fill-opacity:1;stroke-width:0.1595486"
+           id="rect4573-3"
+           width="0.52916682"
+           height="0.52915889"
+           x="6.3499999"
+           y="291.9729" />
+        <rect
+           style="fill:#000005;fill-opacity:1;stroke-width:0.1595486"
+           id="rect4577-5"
+           width="0.52916682"
+           height="0.52915889"
+           x="5.8208332"
+           y="292.76666" />
+        <rect
+           y="293.56042"
+           x="5.8208332"
+           height="0.52915889"
+           width="0.52916682"
+           id="rect4579-6"
+           style="fill:#000005;fill-opacity:1;stroke-width:0.1595486" />
+      </g>
+      <g
+         transform="translate(-10.401534,0.64519629)"
+         id="g4624-2-2"
+         style="fill:#000005;fill-opacity:1">
+        <rect
+           y="291.3277"
+           x="13.576534"
+           height="0.26458332"
+           width="1.0583332"
+           id="rect4618-7-9"
+           style="fill:#000005;fill-opacity:1;stroke-width:0.15954973" />
+        <rect
+           style="fill:#000005;fill-opacity:1;stroke-width:0.11281872"
+           id="rect4575-1"
+           width="0.52916682"
+           height="0.26458332"
+           x="14.1057"
+           y="292.12146" />
+      </g>
+    </g>
+  </g>
+  <g
+     id="active-center"
+     inkscape:label="#g4579">
+    <rect
+       y="0"
+       x="0"
+       height="30"
+       width="45"
+       id="rect4604"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.99999994" />
+    <use
+       height="100%"
+       width="100%"
+       transform="translate(-1.35516e-6,35.000089)"
+       id="use4573"
+       xlink:href="#g4628-6-3"
        y="0"
        x="0" />
   </g>

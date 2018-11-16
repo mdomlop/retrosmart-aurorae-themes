@@ -1,7 +1,7 @@
 PROGRAM_NAME=Retrosmart Aurorae themes
 EXECUTABLE_NAME=retrosmart-aurorae-themes
 DESCRIPTION=A retrosmart look collection of themes for KDE Aurorae.
-VERSION=0.3a
+VERSION=0.4b
 AUTHOR=Manuel Domínguez López
 MAIL=zqbzybc@tznvy.pbz
 SOURCE=https://github.com/mdomlop/retrosmart-aurorae-themes
