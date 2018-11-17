@@ -14,8 +14,6 @@ YEAR = 2018
 dist: README.md ChangeLog AUTHORS
 
 togit: clean README.md
-	git add .
-	git push origin
 
 AUTHORS: authors.in
 	sed s/@mail@/$(mail)/g $^ > $@
