@@ -42,7 +42,7 @@
      id="namedview19"
      showgrid="true"
      inkscape:zoom="4"
-     inkscape:cx="17.88806"
+     inkscape:cx="111.40139"
      inkscape:cy="18.676741"
      inkscape:window-x="0"
      inkscape:window-y="44"
@@ -75,7 +75,7 @@
      height="30"
      width="45"
      id="rect936-67"
-     style="fill:#0066ff;fill-opacity:1;stroke-width:0.99999994" />
+     style="fill:#0033ff;fill-opacity:1;stroke-width:0.99999994" />
   <g
      id="g4615"
      transform="translate(-14.00001,-7.4386597e-5)">
@@ -217,10 +217,11 @@
        transform="rotate(-90)" />
   </g>
   <g
-     id="active-center"
-     inkscape:label="#g4768">
+     id="pressed-center"
+     inkscape:label="#g4768"
+     transform="translate(90,1.4938964e-6)">
     <rect
-       style="fill:#0066ff;fill-opacity:1;stroke-width:0.99999994"
+       style="fill:#0033ff;fill-opacity:1;stroke-width:0.99999994"
        id="rect936"
        width="45"
        height="30"
@@ -312,10 +313,11 @@
        x="0" />
   </g>
   <g
-     id="pressed-center"
-     inkscape:label="#g4784">
+     id="active-center"
+     inkscape:label="#g4784"
+     transform="translate(-90,9.3703611e-6)">
     <rect
-       style="fill:#ffcc00;fill-opacity:1;stroke-width:0.99999994"
+       style="fill:#ff6600;fill-opacity:1;stroke-width:0.99999994"
        id="rect936-6"
        width="45"
        height="30"

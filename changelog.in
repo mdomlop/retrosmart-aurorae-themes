@@ -1,4 +1,13 @@
-retrosmart-aurorae-themes (0.1a) unstable; urgency=medium
+retrosmart-aurorae-themes (1.1a) unstable; urgency=medium
+
+  * 1.1a.
+    - Fix Ghost, Milk and Sky themes.
+    - Butane, Shadow, Heaven, Caelum, Forest and Laurum themes added.
+    - Windows9x theme renamed to 9x.
+
+ -- Manuel Domínguez López <@mail@>  Sat, 17 Nov 2018 08:13:22 +0100
+
+ retrosmart-aurorae-themes (0.1a) unstable; urgency=medium
 
 	* Version 0.1a.
 

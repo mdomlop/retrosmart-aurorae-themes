@@ -38,15 +38,15 @@ For Debian package manager:
 
 - Uninstall:
 
-        # apt purge snapman
+        # apt purge @executable_name@
 
 For Arch linux:
 
 - Build and install:
 
         $ make arch_pkg
-        # pacman -U @executable_name@-@version@-1--any.pkg.tar.xz
+        # pacman -U @executable_name@-@version@-1-any.pkg.tar.xz
 
 - Uninstall:
 
-        # pacman -Rsc snapman
+        # pacman -Rsc @executable_name@

@@ -12,8 +12,8 @@
    id="layer1"
    width="180"
    version="1.1"
-   sodipodi:docname="alldesktops.svg"
-   inkscape:version="0.92.1 r15371">
+   sodipodi:docname="maximize.svg"
+   inkscape:version="0.92.2 2405546, 2018-03-11">
   <metadata
      id="metadata23">
     <rdf:RDF>
@@ -42,8 +42,8 @@
      id="namedview19"
      showgrid="true"
      inkscape:zoom="4"
-     inkscape:cx="17.88806"
-     inkscape:cy="18.676741"
+     inkscape:cx="26.151388"
+     inkscape:cy="52.926741"
      inkscape:window-x="0"
      inkscape:window-y="44"
      inkscape:window-maximized="0"
@@ -75,7 +75,7 @@
      height="30"
      width="45"
      id="rect936-67"
-     style="fill:#0066ff;fill-opacity:1;stroke-width:0.99999994" />
+     style="fill:#000000;fill-opacity:1;stroke-width:0.99999994" />
   <g
      id="g4615"
      transform="translate(-14.00001,-7.4386597e-5)">
@@ -113,14 +113,6 @@
          id="rect965-6-1"
          style="fill:#ffffff;fill-opacity:1;stroke-width:0.26458332" />
     </g>
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke-width:0.86604279"
-       id="rect5299-6-8-3-04-6"
-       width="2.0000737"
-       height="3.0000095"
-       x="17.999926"
-       y="21"
-       transform="rotate(-90)" />
   </g>
   <g
      transform="translate(0,-7.4386597e-5)"
@@ -160,14 +152,6 @@
          x="7.1437502"
          y="292.23749" />
     </g>
-    <rect
-       transform="rotate(-90)"
-       y="21"
-       x="17.999926"
-       height="3.0000095"
-       width="2.0000737"
-       id="rect4627"
-       style="fill:#000000;fill-opacity:1;stroke-width:0.86604279" />
   </g>
   <g
      id="g4643"
@@ -207,20 +191,12 @@
          id="rect4637"
          style="fill:#bfbfbf;fill-opacity:1;stroke-width:0.26458332" />
     </g>
-    <rect
-       style="fill:#bfbfbf;fill-opacity:1;stroke-width:0.86604279"
-       id="rect4641"
-       width="2.0000737"
-       height="3.0000095"
-       x="17.999926"
-       y="21"
-       transform="rotate(-90)" />
   </g>
   <g
      id="active-center"
      inkscape:label="#g4768">
     <rect
-       style="fill:#0066ff;fill-opacity:1;stroke-width:0.99999994"
+       style="fill:#333333;fill-opacity:1;stroke-width:0.99999994"
        id="rect936"
        width="45"
        height="30"
@@ -258,7 +234,7 @@
      id="deactivated-center"
      inkscape:label="#g4792">
     <rect
-       style="fill:#000000;fill-opacity:1;stroke-width:0.99999994"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.99999994"
        id="rect936-61"
        width="45"
        height="30"
@@ -277,7 +253,7 @@
      id="deactivated-inactive-center"
      inkscape:label="#g4796">
     <rect
-       style="fill:#333333;fill-opacity:1;stroke-width:0.99999994"
+       style="fill:#000000;fill-opacity:1;stroke-width:0.99999994"
        id="rect936-4"
        width="45"
        height="30"
