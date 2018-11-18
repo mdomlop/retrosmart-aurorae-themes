@@ -113,6 +113,7 @@ arch_clean:
 	rm -rf pkg $(EXECUTABLE_NAME) $(EXECUTABLE_NAME)-$(VERSION)-1-any.pkg.tar.xz
 
 ocs_pkg: clean ChangeLog
+	#cd src; tar cJf ../$(EXECUTABLE_NAME).tar.xz retrosmart-*
 	cd src; for i in *; do tar cJf $$i.tar.xz $$i;mv $$i.tar.xz ..; done
 
 ocs_clean:

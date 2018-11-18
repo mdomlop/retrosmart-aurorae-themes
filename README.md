@@ -41,7 +41,7 @@ For Debian package manager:
 - Build and install:
 
         $ make debian_pkg
-        # dpkg -i retrosmart-aurorae-themes_1.1a_all.deb
+        # dpkg -i retrosmart-aurorae-themes_1.2a_all.deb
 
 - Uninstall:
 
@@ -52,7 +52,7 @@ For Arch linux:
 - Build and install:
 
         $ make arch_pkg
-        # pacman -U retrosmart-aurorae-themes-1.1a-1-any.pkg.tar.xz
+        # pacman -U retrosmart-aurorae-themes-1.2a-1-any.pkg.tar.xz
 
 - Uninstall:
 
