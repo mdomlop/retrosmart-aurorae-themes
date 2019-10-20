@@ -1,3 +1,10 @@
+![preview](https://github.com/mdomlop/retrosmart-aurorae-themes/blob/master/preview.png "Retrosmart Aurorae themes")
+
+Retrosmart Aurorae themes
+=========================
+
+A retrosmart look collection of themes for KDE Aurorae.
+
 Installation
 ------------
 
@@ -34,19 +41,19 @@ For Debian package manager:
 - Build and install:
 
         $ make debian_pkg
-        # dpkg -i @executable_name@_@version@_all.deb
+        # dpkg -i retrosmart-aurorae-themes_1.3a_all.deb
 
 - Uninstall:
 
-        # apt purge @executable_name@
+        # apt purge retrosmart-aurorae-themes
 
 For Arch linux:
 
 - Build and install:
 
         $ make arch_pkg
-        # pacman -U @executable_name@-@version@-1-any.pkg.tar.xz
+        # pacman -U retrosmart-aurorae-themes-1.3a-1-any.pkg.tar.xz
 
 - Uninstall:
 
-        # pacman -Rsc @executable_name@
+        # pacman -Rsc retrosmart-aurorae-themes

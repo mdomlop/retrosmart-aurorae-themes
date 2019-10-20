@@ -18,22 +18,6 @@ dist: $(THEMES) README.md ChangeLog AUTHORS
 
 include src/*.mk
 
-togit: clean README.md
-
-AUTHORS: authors.in
-	@sed s/@mail@/$(mail)/g $^ > $@
-
-README.md: README INSTALL
-	cat README INSTALL > README.md
-	@echo
-	@echo Now you can make install or make some package
-	@sed -i "s|@executable_name@|$(EXECUTABLE_NAME)|g" $@
-	@sed -i "s|@version@|$(VERSION)|g" $@
-
-ChangeLog: changelog.in
-	@sed "s|@mail@|$(MAIL)|g" < $^ > $@
-
-version_update: purge README.md ChangeLog
 
 install: dist
 	install -dm 755 $(DESTDIR)/$(PREFIX)/share/aurorae/themes/
@@ -52,7 +36,7 @@ uninstall:
 	rm -rf $(PREFIX)/share/doc/$(EXECUTABLE_NAME)/
 
 clean: arch_clean debian_clean ocs_clean
-	rm -rf ChangeLog README.md AUTHORS retrosmart-*
+	rm -rf retrosmart-*
 
 debian:
 	mkdir debian

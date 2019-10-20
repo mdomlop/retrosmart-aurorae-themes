@@ -1,8 +1,8 @@
 # Maintainer: Manuel Domínguez López <mdomlop at gmail dot com>
 
-_pkgver_year=2018
-_pkgver_month=01
-_pkgver_day=09
+_pkgver_year=2019
+_pkgver_month=10
+_pkgver_day=20
 
 pkgname=retrosmart-aurorae-themes
 pkgver=1.3a
