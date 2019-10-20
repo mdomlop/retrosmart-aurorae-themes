@@ -9,38 +9,35 @@ DESCRIPTION := $(shell grep ^DESCRIPTION INFO | cut -d= -f2)
 URL := $(shell grep ^URL INFO | cut -d= -f2)
 MAIL := $(shell grep ^MAIL INFO | cut -d= -f2 | tr '[A-Za-z]' '[N-ZA-Mn-za-m]')
 TIMESTAMP = $(shell LC_ALL=C date '+%a, %d %b %Y %T %z')
-YEAR = 2018
+YEAR = 2019
 
-dist: README.md ChangeLog AUTHORS
+BASENAME = retrosmart
+THEMES = $(notdir $(basename $(wildcard src/*.mk)))
+
+dist: $(THEMES) README.md ChangeLog AUTHORS
+
+include src/*.mk
 
 togit: clean README.md
 
 AUTHORS: authors.in
-	sed s/@mail@/$(mail)/g $^ > $@
-
+	@sed s/@mail@/$(mail)/g $^ > $@
 
 README.md: README INSTALL
 	cat README INSTALL > README.md
 	@echo
 	@echo Now you can make install or make some package
-	sed -i "s|@executable_name@|$(EXECUTABLE_NAME)|g" $@
-	sed -i "s|@version@|$(VERSION)|g" $@
+	@sed -i "s|@executable_name@|$(EXECUTABLE_NAME)|g" $@
+	@sed -i "s|@version@|$(VERSION)|g" $@
 
 ChangeLog: changelog.in
-	@echo "$(EXECUTABLE_NAME) ($(VERSION)) unstable; urgency=medium" > $@
-	@echo >> $@
-	@echo "  * Local build." >> $@
-	@echo >> $@
-	@echo " -- $(AUTHOR) <$(MAIL)>  $(TIMESTAMP)" >> $@
-	@echo >> $@
-	@cat $^ >> $@
-	sed -i "s|@mail@|$(MAIL)|g" $@
+	@sed "s|@mail@|$(MAIL)|g" < $^ > $@
 
 version_update: purge README.md ChangeLog
 
 install: dist
 	install -dm 755 $(DESTDIR)/$(PREFIX)/share/aurorae/themes/
-	cp -r src/* $(DESTDIR)/$(PREFIX)/share/aurorae/themes/
+	cp -r retrosmart-* $(DESTDIR)/$(PREFIX)/share/aurorae/themes/
 	chown -R root:root $(DESTDIR)/$(PREFIX)'/share/aurorae/themes'/retrosmart-*
 	chmod -R u=rwX,go=rX $(DESTDIR)/$(PREFIX)'/share/aurorae/themes'/retrosmart-*
 	install -Dm644 LICENSE $(DESTDIR)/$(PREFIX)/share/licenses/$(EXECUTABLE_NAME)/LICENSE
@@ -55,7 +52,7 @@ uninstall:
 	rm -rf $(PREFIX)/share/doc/$(EXECUTABLE_NAME)/
 
 clean: arch_clean debian_clean ocs_clean
-	rm -rf ChangeLog README.md AUTHORS
+	rm -rf ChangeLog README.md AUTHORS retrosmart-*
 
 debian:
 	mkdir debian
@@ -70,7 +67,7 @@ debian/changelog: ChangeLog debian
 	cp ChangeLog $@
 
 debian/control: control debian
-	sed s/@mail@/$(MAIL)/g control > $@
+	@sed s/@mail@/$(MAIL)/g control > $@
 
 debian/README: README.md debian
 	cp README.md debian/README
@@ -87,7 +84,7 @@ debian/copyright: copyright debian
 	@echo License: $(LICENSE) >> $@
 	cat copyright >> $@
 
-debian_pkg: clean debian/compat debian/control debian/rules debian/changelog debian/README
+debian_pkg: clean debian debian/compat debian/control debian/rules debian/changelog debian/README
 	#fakeroot debian/rules clean
 	#fakeroot debian/rules build
 	fakeroot debian/rules binary
@@ -100,10 +97,10 @@ debian_clean:
 	rm -rf debian $(EXECUTABLE_NAME)_$(VERSION)_all.deb
 
 arch_pkg: clean ChangeLog
-	sed -i "s|pkgname=.*|pkgname=$(EXECUTABLE_NAME)|" PKGBUILD
-	sed -i "s|pkgver=.*|pkgver=$(VERSION)|" PKGBUILD
-	sed -i "s|pkgdesc=.*|pkgdesc=\'$(DESCRIPTION)\'|" PKGBUILD
-	sed -i "s|url=.*|url=$(URL)|" PKGBUILD
+	@sed -i "s|pkgname=.*|pkgname=$(EXECUTABLE_NAME)|" PKGBUILD
+	@sed -i "s|pkgver=.*|pkgver=$(VERSION)|" PKGBUILD
+	@sed -i "s|pkgdesc=.*|pkgdesc=\'$(DESCRIPTION)\'|" PKGBUILD
+	@sed -i "s|url=.*|url=$(URL)|" PKGBUILD
 	makepkg
 	@echo Package done!
 	@echo You can install it as root with:
@@ -112,9 +109,9 @@ arch_pkg: clean ChangeLog
 arch_clean:
 	rm -rf pkg $(EXECUTABLE_NAME) $(EXECUTABLE_NAME)-$(VERSION)-1-any.pkg.tar.xz
 
-ocs_pkg: clean ChangeLog
+ocs_pkg: dist clean ChangeLog
 	#cd src; tar cJf ../$(EXECUTABLE_NAME).tar.xz retrosmart-*
-	cd src; for i in *; do tar cJf $$i.tar.xz $$i;mv $$i.tar.xz ..; done
+	for i in retrosmart-*; do tar cJf $$i.tar.xz $$i;mv $$i.tar.xz ..; done
 
 ocs_clean:
 	rm -f retrosmart-*.tar.xz

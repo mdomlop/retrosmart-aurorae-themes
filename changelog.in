@@ -1,7 +1,15 @@
-retrosmart-aurorae-themes (1.1a) unstable; urgency=medium
+retrosmart-aurorae-themes (1.3a) unstable; urgency=medium
+
+  * 1.3a.
+    - Fixed in button shapes position.
+    - Theme added: Moonlight.
+
+ -- Manuel Domínguez López <@mail@>  Sun, 19 Oct 2019 08:32:22 +0200
+
+retrosmart-aurorae-themes (1.2a) unstable; urgency=medium
 
   * 1.2a.
-    - Themes added: Babe, Lemon and Lime.
+    - Themes added: Babe, Lemon, Lime, and Breeze.
 
  -- Manuel Domínguez López <@mail@>  Sun, 18 Nov 2018 08:13:22 +0100
 
@@ -14,8 +22,8 @@ retrosmart-aurorae-themes (1.1a) unstable; urgency=medium
 
  -- Manuel Domínguez López <@mail@>  Sat, 17 Nov 2018 08:13:22 +0100
 
- retrosmart-aurorae-themes (0.1a) unstable; urgency=medium
+retrosmart-aurorae-themes (0.1a) unstable; urgency=medium
 
-	* Version 0.1a.
+  * 0.1a.
 
  -- Manuel Domínguez López <@mail@>  Fri, 24 Nov 2017 07:06:07 +0100
