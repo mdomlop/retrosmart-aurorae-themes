@@ -80,7 +80,7 @@ debian_pkg: clean debian debian/compat debian/control debian/rules debian/change
 debian_clean:
 	rm -rf debian $(EXECUTABLE_NAME)_$(VERSION)_all.deb
 
-arch_pkg: clean ChangeLog
+arch_pkg: clean
 	@sed -i "s|pkgname=.*|pkgname=$(EXECUTABLE_NAME)|" PKGBUILD
 	@sed -i "s|pkgver=.*|pkgver=$(VERSION)|" PKGBUILD
 	@sed -i "s|pkgdesc=.*|pkgdesc=\'$(DESCRIPTION)\'|" PKGBUILD
@@ -93,9 +93,10 @@ arch_pkg: clean ChangeLog
 arch_clean:
 	rm -rf pkg $(EXECUTABLE_NAME) $(EXECUTABLE_NAME)-$(VERSION)-1-any.pkg.tar.xz
 
-ocs_pkg: dist clean ChangeLog
+ocs_pkg: clean dist
 	#cd src; tar cJf ../$(EXECUTABLE_NAME).tar.xz retrosmart-*
-	for i in retrosmart-*; do tar cJf $$i.tar.xz $$i;mv $$i.tar.xz ..; done
+	#for i in retrosmart-*; do tar cJf $$i.tar.xz $$i; done
+	tar cJf $(EXECUTABLE_NAME).tar.xz retrosmart-*/
 
 ocs_clean:
 	rm -f retrosmart-*.tar.xz
