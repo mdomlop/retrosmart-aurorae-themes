@@ -28,7 +28,6 @@ install: dist
 	install -Dm644 AUTHORS $(DESTDIR)/$(PREFIX)/share/doc/$(EXECUTABLE_NAME)/AUTHORS
 	install -Dm644 ChangeLog $(DESTDIR)/$(PREFIX)/share/doc/$(EXECUTABLE_NAME)/ChangeLog
 	install -Dm644 README.md $(DESTDIR)/$(PREFIX)/share/doc/$(EXECUTABLE_NAME)/README
-	install -Dm644 FAQ $(DESTDIR)/$(PREFIX)/share/doc/$(EXECUTABLE_NAME)/FAQ
 
 uninstall:
 	rm -f $(PREFIX)/share/aurorae/themes/retrosmart-*
