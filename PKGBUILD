@@ -5,7 +5,7 @@ _pkgver_month=10
 _pkgver_day=20
 
 pkgname=retrosmart-aurorae-themes
-pkgver=1.4b
+pkgver=1.5
 pkgrel=1
 pkgdesc='A retrosmart look collection of themes for KDE Aurorae.'
 url=https://github.com/mdomlop/retrosmart-aurorae-themes
