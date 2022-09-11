@@ -2,3 +2,5 @@
 !/.gitignore
 /retrosmart-*
 *.tar.xz
+*.pkg.tar.*
+*.deb

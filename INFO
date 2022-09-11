@@ -1,5 +1,5 @@
-PROGRAM_NAME=Retrosmart Aurorae themes
-EXECUTABLE_NAME=retrosmart-aurorae-themes
+HNAME=Retrosmart Aurorae themes
+PKGNAME=retrosmart-aurorae-themes
 DESCRIPTION=A retrosmart look collection of themes for KDE Aurorae.
 VERSION=1.5
 AUTHOR=Manuel Domínguez López
@@ -7,3 +7,4 @@ MAIL=zqbzybc@tznvy.pbz
 SOURCE=https://github.com/mdomlop/retrosmart-aurorae-themes
 URL=https://github.com/mdomlop/retrosmart-aurorae-themes
 LICENSE=GPL-3
+YEAR=2019

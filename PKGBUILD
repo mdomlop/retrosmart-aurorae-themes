@@ -8,9 +8,9 @@ pkgname=retrosmart-aurorae-themes
 pkgver=1.5
 pkgrel=1
 pkgdesc='A retrosmart look collection of themes for KDE Aurorae.'
-url=https://github.com/mdomlop/retrosmart-aurorae-themes
+url='https://github.com/mdomlop/retrosmart-aurorae-themes'
 source=()
-license=('GPL3')
+license=('GPL-3')
 optdepends=('retrosmart-kvantum-theme: The corresponding theme for Kvantum'
             'retrosmart-qtcurve-theme: The corresponding theme for QtCurve'
             'retrosmart-gtk-themes: The corresponding GTK themes'
